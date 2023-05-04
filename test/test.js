@@ -25,7 +25,7 @@ function showCardsList(data) {
 getData();
 
 function getReading(){
-    let randomNum = Math.floor(Math.random()*77);   // 78 cards => index numbers 0-77
+    let randomNum = Math.floor(Math.random()*78);   // 78 cards => creating a random number between 0 and 77
     console.log(randomNum);
     return randomNum;
 }
