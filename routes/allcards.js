@@ -8,7 +8,7 @@ const userRoutes = (app, fs) => {
             if (err) {
                 throw err;
             }
-        res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+        res.header("Access-Control-Allow-Origin", "http://localhost:3001");     //make sure to use react-app on localhost:3001 or change url here!
         res.status(200).send(JSON.parse(data));
         });
     });
