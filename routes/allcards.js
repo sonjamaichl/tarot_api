@@ -1,4 +1,4 @@
-const userRoutes = (app, fs) => {
+const allCardsRoutes = (app, fs) => {
     //variables
     const dataPath = './data/allcards.json';
 
@@ -8,11 +8,11 @@ const userRoutes = (app, fs) => {
             if (err) {
                 throw err;
             }
-        res.header("Access-Control-Allow-Origin", "http://localhost:3001");     //make sure to use react-app on localhost:3001 or change url here!
+        res.header("Access-Control-Allow-Origin", "*");     //make sure to use react-app on localhost:3001 or change url here!
         res.status(200).send(JSON.parse(data));
         });
     });
 
 };
 
-module.exports = userRoutes;
+module.exports = allCardsRoutes;
