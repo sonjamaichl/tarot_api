@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
             {'/allcards' : 'get the whole dataset with all 78 cards'}, 
             {'name/x' : 'find all cards with name that contains x'}, 
             {'meaning/y' : 'find all cards that contain y in their keywords or meanings properties'},
-            {'/cards/random' : 'get one random card'}]
+            {'/random' : 'get one random card'}]      //could also be just '/random' now that the name path has changed!!!
     })
 });
 

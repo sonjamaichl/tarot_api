@@ -3,7 +3,7 @@ const randomRoutes = (app, fs) => {
     const dataPath = './data/allcards.json';
 
     
-    app.get('/cards/random', (req, res) => {
+    app.get('/random', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
