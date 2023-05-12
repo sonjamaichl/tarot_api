@@ -2,6 +2,7 @@ const allCardsRoutes = require('./allcards');
 const nameRoutes = require('./name');
 const randomRoutes = require('./random');
 const meaningRoutes = require('./meaning');
+const idRoutes = require('./id');
 
 const appRouter = (app, fs) => {
 app.get('/', (req, res) => {
@@ -12,9 +13,10 @@ app.get('/', (req, res) => {
         info: 'The API contains info about all 78 tarot cards. You can use the following endpoints to fetch data:',
         endpoints: [
             {'/allcards' : 'get the whole dataset with all 78 cards'}, 
-            {'name/x' : 'find all cards with name that contains x'}, 
-            {'meaning/y' : 'find all cards that contain y in their keywords or meanings properties'},
-            {'/random' : 'get one random card'}]      //could also be just '/random' now that the name path has changed!!!
+            {'/name/x' : 'find all cards whose name contains x'}, 
+            {'/meaning/y': 'find all cards that contain y in their keywords or meanings properties' },
+            {'/id/z' : 'get the card with the id z (e.g. /id/p05 for 5 of Pentacles => to see all id properties, use allcards endpoint)'},
+            {'/random' : 'get one random card'}]      
     })
 });
 
@@ -22,6 +24,7 @@ allCardsRoutes(app, fs);
 nameRoutes(app, fs);
 randomRoutes(app, fs);
 meaningRoutes(app, fs);
+idRoutes(app, fs);
 };
 
 module.exports = appRouter;
