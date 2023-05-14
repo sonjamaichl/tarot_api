@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
             {'/name/x' : 'find all cards whose name contains x'}, 
             {'/meaning/y': 'find all cards that contain y in their keywords or meanings properties' },
             {'/id/z' : 'get the card with the id z (e.g. /id/p05 for 5 of Pentacles => to see all id properties, use allcards endpoint)'},
-            {'/random' : 'get one random card'}]      
+            {'/random/n' : 'get n random cards (possible values for n are integers between 1 and 10)'}]      
     })
 });
 
