@@ -8,7 +8,7 @@ const idRoutes = (app, fs) => {
             if (err) {
                 throw err;
             }
-        //SEARCH FOr MATCHES AND STORE THEM IN NEW ARRAY
+        //SEARCH FOR CARD WITH MATCHING ID
         const id = req.params.id;
         const result = JSON.parse(data);
         const cards = result.cards;
